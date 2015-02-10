@@ -1,0 +1,45 @@
+TFTP.java
+Author : Vaibhav Gandhi
+--------------------------------------------------------------------------------
+Installation
+On a terminal or command line:
+	javac TFTP.java
+	This will compile the program and create sources that can be used to run the program.
+--------------------------------------------------------------------------------
+Usage
+To run the program, first follow the Installation instructions. After that run the following command on command line or terminal:
+	java TFTP
+Once you have the client running you can use the following commands:
+ 			1. To connect to a TFTP server, eg. glados
+ 				tftp> connect glados.cs.rit.edu
+ 			2. To get a file from the server, eg. foo.txt
+ 				tftp> get foo.txt
+ 			3. To get all the commands
+ 				tftp> ?
+ 			4. To put a file
+ 				tftp> put file
+ 			5. To exit
+ 				tftp> quit
+--------------------------------------------------------------------------------
+Information
+1. A 'get' request will create a copy of the files in the directory from where the program is running. Even if a file is not found, you may see a file with the name of the file
+requested from the server.
+2. Put command is blocked on all TFTP servers.
+--------------------------------------------------------------------------------
+Sample Usage:
+vrg5913:~/Courses/FCN$ javac TFTP.java 
+vrg5913:~/Courses/FCN$ java TFTP 
+tftp> ?                                                            
+Commands may be abbreviated.  Commands are:
+
+connect		connect to remote tftp
+put			send file
+get			receive file
+quit		exit tftp
+tftp> connect glados.cs.rit.edu
+tftp> get foo.txt
+Received 9 bytes in 1 milliseconds
+tftp> put foo.txt
+Error code 2: Access violation
+tftp> quit
+-------------------------------------------------------------------------------
